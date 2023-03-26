@@ -1,12 +1,9 @@
 import Head from 'next/head'
-import { Inter } from 'next/font/google'
 import HeroSection from '@/components/HeroSection'
 import FeatureSection from '@/components/FeatureSection'
 import CTASection from '@/components/CTASection'
 import CompanyLogos from '@/components/CompanyLogos'
 import Footer from '@/components/Footer'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (

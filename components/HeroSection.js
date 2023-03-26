@@ -155,7 +155,7 @@ export default function HeroSection() {
                   We Bridge the Gap Between Instagram and Your Business.
                   </h1>
                   <p className="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
-                  We believe that social media should be a powerful tool for small businesses, not a source of frustration. That's why we created BridgeCart, a social commerce solution that simplifies the sales process and helps you reach more customers online.
+                  We believe that social media should be a powerful tool for small businesses, not a source of frustration. That`&apos;s why we created BridgeCart, a social commerce solution that simplifies the sales process and helps you reach more customers online.
                   </p>
                   <div className="mt-10 flex items-center gap-x-6">
                     <a
