@@ -45,7 +45,7 @@ export default function FeatureSection() {
               <h2 className="text-base font-semibold leading-7 text-indigo-600">Sell more on Social Media</h2>
               <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">An easier way to reach your customers</p>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-              At BridgeCart, we're dedicated to helping small businesses succeed on social media. Our platform provides a hassle-free solution for showcasing your products, connecting with customers, and increasing sales.
+              At BridgeCart, we&apos;re dedicated to helping small businesses succeed on social media. Our platform provides a hassle-free solution for showcasing your products, connecting with customers, and increasing sales.
               </p>
               <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                 {features.map((feature) => (

@@ -115,7 +115,7 @@ export default function Footer() {
             </div>
             <h2 className="text-3xl font-bold tracking-tight text-white">Get in touch</h2>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-            We're dedicated to providing exceptional customer service, so please don't hesitate to contact us with any questions, comments, or concerns. Our friendly team is here to help in any way we can.
+            We&apos;re dedicated to providing exceptional customer service, so please don&apos;t hesitate to contact us with any questions, comments, or concerns. Our friendly team is here to help in any way we can.
             </p>
             <dl className="mt-10 space-y-4 text-base leading-7 text-gray-300">
               <div className="flex gap-x-4">
