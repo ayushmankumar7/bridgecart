@@ -12,7 +12,7 @@ export default function Home() {
         <title>BridgeCart - Your Social Commerce</title>
         <meta name="description" content="Social Commerce Website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/small_ico.png" />
       </Head>
       <HeroSection />
       <FeatureSection />
