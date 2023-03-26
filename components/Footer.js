@@ -76,7 +76,7 @@ export default function Footer() {
   }
 
   return (
-    <div className="relative isolate bg-gray-900">
+    <div className="relative isolate bg-gray-900" id="footerSection">
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div className="relative px-6 pt-24 pb-20 sm:pt-32 lg:static lg:py-48 lg:px-8">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
