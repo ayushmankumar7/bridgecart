@@ -1,4 +1,5 @@
 import { BuildingOffice2Icon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline'
+import { useState } from 'react';
 
 const navigation = {
     main: [
@@ -61,6 +62,19 @@ const navigation = {
   }
 
 export default function Footer() {
+  const [name, setName] = useState('');
+  const [lastname, setLastname] = useState('');
+  const [email, setEmail] = useState('');
+  const [businessName, setBusinessName] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const textmessage = `Hi, I am *${name} ${lastname}* from *${businessName}* and I am interested in your services. \n\n Message: ${"\n\n" + message}`;
+    const url = `https://wa.me/9874455436?text=${textmessage}`;
+    window.open(url, '_blank');
+  }
+
   return (
     <div className="relative isolate bg-gray-900">
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
@@ -154,7 +168,7 @@ export default function Footer() {
             </dl>
           </div>
         </div>
-        <form action="#" method="POST" className="px-6 pb-24 pt-20 sm:pb-32 lg:py-48 lg:px-8">
+        <form onSubmit={handleSubmit} method="POST" className="px-6 pb-24 pt-20 sm:pb-32 lg:py-48 lg:px-8">
           <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
             <div className="grid grid-cols-1 gap-y-6 gap-x-8 sm:grid-cols-2">
               <div>
@@ -167,6 +181,7 @@ export default function Footer() {
                     name="first-name"
                     id="first-name"
                     autoComplete="given-name"
+                    onChange={(e) => setName(e.target.value)}
                     className="block w-full rounded-md border-0 bg-white/5 py-2 px-3.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -181,6 +196,7 @@ export default function Footer() {
                     name="last-name"
                     id="last-name"
                     autoComplete="family-name"
+                    onChange={(e) => setLastname(e.target.value)}
                     className="block w-full rounded-md border-0 bg-white/5 py-2 px-3.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -195,20 +211,21 @@ export default function Footer() {
                     name="email"
                     id="email"
                     autoComplete="email"
+                    onChange={(e) => setEmail(e.target.value)}
                     className="block w-full rounded-md border-0 bg-white/5 py-2 px-3.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
               <div className="sm:col-span-2">
-                <label htmlFor="phone-number" className="block text-sm font-semibold leading-6 text-white">
-                  Phone number
+                <label htmlFor="business-name" className="block text-sm font-semibold leading-6 text-white">
+                  Business Name
                 </label>
                 <div className="mt-2.5">
                   <input
-                    type="tel"
-                    name="phone-number"
-                    id="phone-number"
-                    autoComplete="tel"
+                    type="text"
+                    name="business-name"
+                    id="business-name"
+                    onChange={(e) => setBusinessName(e.target.value)}
                     className="block w-full rounded-md border-0 bg-white/5 py-2 px-3.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -224,6 +241,7 @@ export default function Footer() {
                     rows={4}
                     className="block w-full rounded-md border-0 bg-white/5 py-2 px-3.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
                     defaultValue={''}
+                    onChange={(e) => setMessage(e.target.value)}
                   />
                 </div>
               </div>
